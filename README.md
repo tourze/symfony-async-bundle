@@ -1,4 +1,4 @@
-# Symfony Async Message Bundle
+# Symfony Async Bundle
 
 [English](#english) | [中文](#中文)
 
