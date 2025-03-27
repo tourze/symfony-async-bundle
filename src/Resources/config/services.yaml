@@ -4,6 +4,8 @@ services:
     autowire: true      # Automatically injects dependencies in your services.
     autoconfigure: true # Automatically registers your services as commands, event subscribers, etc.
 
+  Tourze\Symfony\Async\Aspect\:
+    resource: '../../Aspect/'
   Tourze\Symfony\Async\MessageHandler\:
     resource: '../../MessageHandler/'
   Tourze\Symfony\Async\Service\:
