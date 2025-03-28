@@ -43,7 +43,7 @@ class ServiceCallHandler
                 $newMessage = clone $message;
                 $newMessage->setRetryCount($message->getRetryCount() - 1); // 减1次
 
-                $delaySecond = min($newMessage->getMaxRetryCount() - $newMessage->getRetryCount(), HOUR_IN_SECONDS);
+                $delaySecond = min($newMessage->getMaxRetryCount() - $newMessage->getRetryCount(), 60 * 60);
                 $this->messageBus->dispatch($newMessage, [
                     new DelayStamp($delaySecond * 1000),
                 ]);
