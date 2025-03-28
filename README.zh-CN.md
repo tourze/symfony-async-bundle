@@ -6,32 +6,32 @@
 [![Total Downloads](https://img.shields.io/packagist/dt/tourze/symfony-async-bundle.svg?style=flat-square)](https://packagist.org/packages/tourze/symfony-async-bundle)
 [![License](https://img.shields.io/github/license/tourze/symfony-async-bundle.svg?style=flat-square)](https://packagist.org/packages/tourze/symfony-async-bundle)
 
-A Symfony bundle that provides asynchronous command execution and service method invocation capabilities using Symfony Messenger.
+一个使用 Symfony Messenger 提供异步命令执行和服务方法调用功能的 Symfony Bundle。
 
-## Features
+## 特性
 
-- Asynchronous command execution with full support for options and arguments
-- Service method invocation through the `#[Async]` attribute
-- Built-in error handling and logging
-- Automatic retry mechanism for failed operations
-- Delayed execution support
-- Full integration with Symfony Messenger
+- 支持选项和参数的异步命令执行
+- 通过 `#[Async]` 属性进行服务方法调用
+- 内置错误处理和日志记录
+- 失败操作的自动重试机制
+- 延迟执行支持
+- 与 Symfony Messenger 完全集成
 
-## Requirements
+## 要求
 
-- PHP 8.1 or higher
-- Symfony 6.4 or higher
-- Symfony Messenger component
+- PHP 8.1 或更高版本
+- Symfony 6.4 或更高版本
+- Symfony Messenger 组件
 
-## Installation
+## 安装
 
 ```bash
 composer require tourze/symfony-async-bundle
 ```
 
-## Configuration
+## 配置
 
-Enable the bundle in your `config/bundles.php`:
+在 `config/bundles.php` 中启用 bundle：
 
 ```php
 return [
@@ -40,11 +40,11 @@ return [
 ];
 ```
 
-Make sure you have configured Symfony Messenger with appropriate transport for async messages.
+确保您已经为异步消息配置了 Symfony Messenger 的适当传输。
 
-## Quick Start
+## 快速开始
 
-### Asynchronous Command Execution
+### 异步命令执行
 
 ```php
 <?php
@@ -61,7 +61,7 @@ class MyController
 
     public function someAction()
     {
-        // Create a message to run a command asynchronously
+        // 创建一个异步运行命令的消息
         $message = new RunCommandMessage();
         $message->setCommand('app:my-command');
         $message->setOptions([
@@ -69,19 +69,19 @@ class MyController
             '--option2' => 'value2'
         ]);
 
-        // Dispatch to queue
+        // 发送到队列
         $this->messageBus->dispatch($message, [
             new AsyncStamp()
         ]);
 
-        return 'Command queued for execution';
+        return '命令已加入队列等待执行';
     }
 }
 ```
 
-### Using Async Attribute
+### 使用 Async 属性
 
-You can mark any service method for asynchronous execution using the `#[Async]` attribute:
+您可以使用 `#[Async]` 属性标记任何服务方法以进行异步执行：
 
 ```php
 <?php
@@ -95,25 +95,25 @@ class ReportGenerator
     #[Async(retryCount: 3, delayMs: 5000)]
     public function generateLargeReport(int $userId): void
     {
-        // This method will be executed asynchronously
-        // with 3 retry attempts and 5-second delay
+        // 此方法将异步执行
+        // 有3次重试尝试和5秒延迟
 
-        // ...time-consuming operations
+        // ...耗时操作
     }
 }
 ```
 
-Then call the method normally:
+然后正常调用该方法：
 
 ```php
 $reportGenerator->generateLargeReport(123);
-// This returns immediately, with the actual work happening in the background
+// 这将立即返回，实际工作在后台进行
 ```
 
-## Contributing
+## 贡献
 
-Please see [CONTRIBUTING.md](CONTRIBUTING.md) for details.
+请查看 [CONTRIBUTING.md](CONTRIBUTING.md) 了解详情。
 
-## License
+## 许可证
 
-The MIT License (MIT). Please see [License File](LICENSE) for more information.
+MIT 许可证。请查看 [License 文件](LICENSE) 获取更多信息。
