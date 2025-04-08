@@ -15,6 +15,7 @@ class AsyncResult
     public function cancel(): bool
     {
         // TODO
+        return false;
     }
 
     /**
@@ -23,6 +24,7 @@ class AsyncResult
     public function isCancelled(): bool
     {
         // TODO
+        return false;
     }
 
     /**
@@ -31,6 +33,7 @@ class AsyncResult
     public function isDone(): bool
     {
         // TODO
+        return false;
     }
 
     /**
@@ -39,5 +42,6 @@ class AsyncResult
     public function get(): mixed
     {
         // TODO
+        return false;
     }
 }

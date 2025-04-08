@@ -4,6 +4,7 @@
   "license": "MIT",
   "require": {
     "php": "^8.1",
+    "doctrine/common": "^3.5",
     "doctrine/orm": "^2.17 || ^3.0",
     "psr/log": "^3|^2|^1",
     "psr/container": "^1.1|^2.0",
@@ -11,8 +12,10 @@
     "symfony/framework-bundle": "^6.4",
     "symfony/http-kernel": "^6.4",
     "symfony/messenger": "^6.4",
+    "symfony/property-info": "^6.4",
     "symfony/serializer": "^6.4",
     "symfony/yaml": "^6.4 || ^7.1",
+    "tourze/doctrine-helper": "0.0.*",
     "tourze/symfony-aop-bundle": "0.0.*"
   },
   "suggest": {
