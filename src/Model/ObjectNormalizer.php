@@ -11,6 +11,7 @@ use Tourze\DoctrineHelper\ReflectionHelper;
 /**
  * 扩容默认的对象处理器，让他支持加载实体
  */
+/** @phpstan-ignore class.extendsFinalByPhpDoc */
 class ObjectNormalizer extends \Symfony\Component\Serializer\Normalizer\ObjectNormalizer
 {
     public function __construct(
