@@ -4,6 +4,7 @@ namespace Tourze\Symfony\Async\MessageHandler;
 
 use Psr\Container\ContainerInterface;
 use Psr\Log\LoggerInterface;
+use Symfony\Component\DependencyInjection\Attribute\Autowire;
 use Symfony\Component\Messenger\Attribute\AsMessageHandler;
 use Symfony\Component\Messenger\MessageBusInterface;
 use Symfony\Component\Messenger\Stamp\DelayStamp;
@@ -14,7 +15,7 @@ use Tourze\Symfony\Async\Service\Serializer;
 class ServiceCallHandler
 {
     public function __construct(
-        private readonly ContainerInterface $container,
+        #[Autowire(service: 'service_container')] private readonly ContainerInterface $container,
         private readonly Serializer $serializer,
         private readonly LoggerInterface $logger,
         private readonly MessageBusInterface $messageBus,
