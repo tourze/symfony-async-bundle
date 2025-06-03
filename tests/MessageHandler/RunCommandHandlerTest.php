@@ -5,7 +5,7 @@ namespace Tourze\Symfony\Async\Tests\MessageHandler;
 use PHPUnit\Framework\TestCase;
 use Psr\Log\LoggerInterface;
 use Symfony\Component\HttpKernel\KernelInterface;
-use Tourze\Symfony\Async\MessageHandler\RunCommandHandler;
+use Tourze\AsyncCommandBundle\MessageHandler\RunCommandHandler;
 
 class RunCommandHandlerTest extends TestCase
 {

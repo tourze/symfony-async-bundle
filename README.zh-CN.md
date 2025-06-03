@@ -49,9 +49,7 @@ return [
 ```php
 <?php
 
-use Symfony\Component\Messenger\MessageBusInterface;
-use Symfony\Component\Messenger\Stamp\AsyncStamp;
-use Tourze\Symfony\Async\Message\RunCommandMessage;
+use Symfony\Component\Messenger\MessageBusInterface;use Symfony\Component\Messenger\Stamp\AsyncStamp;use Tourze\AsyncCommandBundle\Message\RunCommandMessage;
 
 class MyController
 {
