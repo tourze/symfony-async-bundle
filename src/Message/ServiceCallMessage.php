@@ -2,6 +2,8 @@
 
 namespace Tourze\Symfony\Async\Message;
 
+use Tourze\AsyncContracts\AsyncMessageInterface;
+
 class ServiceCallMessage implements AsyncMessageInterface
 {
     /**

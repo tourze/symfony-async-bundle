@@ -3,7 +3,7 @@
 namespace Tourze\Symfony\Async\Tests\Message;
 
 use PHPUnit\Framework\TestCase;
-use Tourze\Symfony\Async\Message\AsyncMessageInterface;
+use Tourze\AsyncContracts\AsyncMessageInterface;
 use Tourze\Symfony\Async\Message\RunCommandMessage;
 use Tourze\Symfony\Async\Message\ServiceCallMessage;
 

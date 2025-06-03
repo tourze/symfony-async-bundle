@@ -2,6 +2,8 @@
 
 namespace Tourze\Symfony\Async\Message;
 
+use Tourze\AsyncContracts\AsyncMessageInterface;
+
 /**
  * 异步运行命令的消息类
  *
