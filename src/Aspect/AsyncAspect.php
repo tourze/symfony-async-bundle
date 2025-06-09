@@ -5,12 +5,12 @@ namespace Tourze\Symfony\Async\Aspect;
 use Psr\Log\LoggerInterface;
 use Symfony\Component\Messenger\MessageBusInterface;
 use Symfony\Component\Messenger\Stamp\DelayStamp;
+use Tourze\AsyncServiceCallBundle\Message\ServiceCallMessage;
+use Tourze\AsyncServiceCallBundle\Service\Serializer;
 use Tourze\Symfony\Aop\Attribute\Aspect;
 use Tourze\Symfony\Aop\Attribute\Before;
 use Tourze\Symfony\Aop\Model\JoinPoint;
 use Tourze\Symfony\Async\Attribute\Async;
-use Tourze\Symfony\Async\Message\ServiceCallMessage;
-use Tourze\Symfony\Async\Service\Serializer;
 
 /**
  * 异步执行切面

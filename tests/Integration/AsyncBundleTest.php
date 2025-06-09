@@ -24,7 +24,7 @@ class AsyncBundleTest extends TestCase
 
         // 检查是否注册了必要的服务
         $this->assertTrue($container->hasDefinition('Tourze\Symfony\Async\Aspect\AsyncAspect'));
-        $this->assertTrue($container->hasDefinition('Tourze\Symfony\Async\MessageHandler\ServiceCallHandler'));
-        $this->assertTrue($container->hasDefinition('Tourze\Symfony\Async\Service\Serializer'));
+        $this->assertTrue($container->hasDefinition('Tourze\AsyncServiceCallBundle\MessageHandler\ServiceCallHandler'));
+        $this->assertTrue($container->hasDefinition('Tourze\AsyncServiceCallBundle\Service\Serializer'));
     }
 }
