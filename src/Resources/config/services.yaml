@@ -6,7 +6,3 @@ services:
 
   Tourze\Symfony\Async\Aspect\:
     resource: '../../Aspect/'
-  Tourze\Symfony\Async\MessageHandler\:
-    resource: '../../MessageHandler/'
-  Tourze\Symfony\Async\Service\:
-    resource: '../../Service/'
