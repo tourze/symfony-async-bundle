@@ -16,7 +16,6 @@
     "symfony/property-info": "^6.4",
     "symfony/serializer": "^6.4",
     "symfony/yaml": "^6.4 || ^7.1",
-    "tourze/async-contracts": "0.0.*",
     "tourze/async-service-call-bundle": "0.0.*",
     "tourze/symfony-aop-bundle": "~0.0.4"
   },

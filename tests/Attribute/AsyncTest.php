@@ -3,7 +3,7 @@
 namespace Tourze\Symfony\Async\Tests\Attribute;
 
 use PHPUnit\Framework\TestCase;
-use Tourze\Symfony\Async\Attribute\Async;
+use Tourze\Symfony\AopAsyncBundle\Attribute\Async;
 
 class AsyncTest extends TestCase
 {

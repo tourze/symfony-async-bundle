@@ -86,7 +86,7 @@ class MyController
 
 namespace App\Service;
 
-use Tourze\Symfony\Async\Attribute\Async;
+use Tourze\Symfony\AopAsyncBundle\Attribute\Async;
 
 class ReportGenerator
 {

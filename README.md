@@ -86,7 +86,7 @@ You can mark any service method for asynchronous execution using the `#[Async]` 
 
 namespace App\Service;
 
-use Tourze\Symfony\Async\Attribute\Async;
+use Tourze\Symfony\AopAsyncBundle\Attribute\Async;
 
 class ReportGenerator
 {

@@ -2,7 +2,7 @@
 
 namespace Tourze\Symfony\Async\Tests\Fixtures;
 
-use Tourze\Symfony\Async\Attribute\Async;
+use Tourze\Symfony\AopAsyncBundle\Attribute\Async;
 
 class TestService
 {

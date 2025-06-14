@@ -6,7 +6,7 @@ use PHPUnit\Framework\TestCase;
 use Psr\Log\LoggerInterface;
 use Symfony\Component\Messenger\MessageBusInterface;
 use Tourze\AsyncServiceCallBundle\Service\Serializer;
-use Tourze\Symfony\Async\Aspect\AsyncAspect;
+use Tourze\Symfony\AopAsyncBundle\Aspect\AsyncAspect;
 
 class AsyncAspectTest extends TestCase
 {
